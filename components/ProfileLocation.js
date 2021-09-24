@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Avatar } from "react-native-elements";
-import Entypo from "react-native-vector-icons/Entypo";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function ProfileLocation() {
   return (
@@ -14,9 +14,9 @@ export default function ProfileLocation() {
       }}
     >
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Entypo
+        <Ionicons
           style={{ marginRight: 5, marginLeft: 10 }}
-          name="location-pin"
+          name="location-sharp"
           size={24}
           color="crimson"
         />
