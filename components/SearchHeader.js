@@ -20,7 +20,7 @@ const categoriesData = [
 
 export default function SearchHeader() {
   return (
-    <View>
+    <View style={{ marginBottom: 10 }}>
       {/* Searchbox */}
       <View
         style={{
