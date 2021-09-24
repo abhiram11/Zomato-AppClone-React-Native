@@ -5,42 +5,42 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 const foodCategoryData = [
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://static.onecms.io/wp-content/uploads/sites/35/2021/02/12/heart-healthy-foods-promo.jpg",
     title: "Healthy",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/oecyzqehfysmfzczqeov",
     title: "Home Style",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://achalafood.com/wp-content/uploads/2018/07/mixed-vegetable-poha-featured-image.jpg",
     title: "Poha",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://www.vegrecipesofindia.com/wp-content/uploads/2013/01/matar-kachori-recipe-2-500x375.jpg",
     title: "Kachori",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://www.cookwithmanali.com/wp-content/uploads/2019/08/Homemade-Samosa-500x500.jpg",
     title: "Samosa",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFHCQcWavSwL86mByRUzILw_RPOMiQtB2FDw&usqp=CAU",
     title: "Sandwich",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://i.ndtvimg.com/i/2018-05/aloo-ka-paratha_650x400_61525766113.jpg",
     title: "Paratha",
   },
   {
     imageUrl:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2021/06/15/mozzarella-pizza-margherita-FT-RECIPE0621.jpg",
+      "https://cdn1.foodviva.com/static-content/food-images/breakfast-recipes/medu-vada/medu-vada.jpg",
     title: "Vada",
   },
 ];
