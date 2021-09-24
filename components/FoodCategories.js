@@ -88,6 +88,7 @@ const FoodCategory = (props) => (
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+
       marginVertical: 10,
     }}
   >
