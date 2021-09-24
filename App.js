@@ -1,6 +1,7 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import Home from "./screens/Home";
+import RestaurantScreen from "./screens/RestaurantScreen";
 
 export default function App() {
   return (
@@ -8,12 +9,10 @@ export default function App() {
       style={{
         flex: 1,
         marginTop: 45,
-        // justifyContent: "center",
-        // alignItems: "center",
       }}
     >
-      <Home />
-      {/* <Text>Let's start the zomato clone!!</Text> */}
+      {/* <Home /> */}
+      <RestaurantScreen />
     </View>
   );
 }

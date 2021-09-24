@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, ScrollView } from "react-native";
-import FoodCategories from "../components/FoodCategories";
-import Footer from "../components/Footer";
-import ProfileLocation from "../components/ProfileLocation";
-import Restaurants from "../components/Restaurants";
-import SearchHeader from "../components/SearchHeader";
+import FoodCategories from "../components/Home/FoodCategories";
+import Footer from "../components/Home/Footer";
+import ProfileLocation from "../components/Home/ProfileLocation";
+import Restaurants from "../components/Home/Restaurants";
+import SearchHeader from "../components/Home/SearchHeader";
 
 export default function Home() {
   return (
