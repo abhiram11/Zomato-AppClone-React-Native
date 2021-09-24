@@ -11,7 +11,7 @@ export default function Home() {
       <View style={{ margin: 6 }}>
         <ProfileLocation />
         <SearchHeader />
-        {/* <FoodCategories /> */}
+        <FoodCategories />
         <Restaurants />
       </View>
     </ScrollView>
