@@ -97,6 +97,10 @@ const FoodCategory = (props) => (
       }}
       style={{ width: 80, height: 80, borderRadius: 100 }}
     />
-    <Text>{props.heading}</Text>
+    <Text
+      style={{ fontSize: 12, fontWeight: "bold", color: "gray", marginTop: 4 }}
+    >
+      {props.heading}
+    </Text>
   </View>
 );
