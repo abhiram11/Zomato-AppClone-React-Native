@@ -7,11 +7,14 @@ import {
   ScrollView,
 } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5"; // crown, caret-down
+
+import Ionicons from "react-native-vector-icons/Ionicons"; // swap-vertical popular,
 
 const categoriesData = [
   { title: "MAX Safety" },
-  { title: " <Icon< PRO" },
-  { title: "Cuisines ^" },
+  { title: "PRO", icon: "crown", left: true },
+  { title: "Cuisines", icon: "caret-down" },
   { title: "Rating 4.0+" },
   { title: "Fastest Delivery" },
   { title: "Offers" },
@@ -46,7 +49,6 @@ export default function SearchHeader() {
         />
       </View>
       {/* Scrollable Categories */}
-      {/* Make a component that can be re-used */}
       <View style={{ flexDirection: "row" }}>
         <ScrollView
           horizontal
@@ -54,40 +56,52 @@ export default function SearchHeader() {
           showsHorizontalScrollIndicator={false}
         >
           {categoriesData.map((category, index) => (
-            <CategoriesSearch category={category.title} key={index} />
+            <CategoriesSearch
+              category={category.title}
+              directionLeft={category.left}
+              iconName={category.icon}
+              key={index}
+            />
           ))}
         </ScrollView>
-        <CategoriesSearch category="^^ Popular" isPopular />
+        {/* swap-vertical */}
+        <CategoriesSearch category="Popular" isPopular directionLeft />
       </View>
     </View>
   );
 }
 
 const CategoriesSearch = (props) => {
-  // const [clicked, setClicked] = useState(false);
-  // const toggleColor = () => {
-  //   setClicked(!clicked);
-  // };
-
   return (
-    // set overall margins for the view later
     <View
       style={{
         padding: 6,
-        // margin: props.isPopular ? 0 : 4,
         margin: 4,
         borderWidth: 1,
         borderRadius: 10,
         borderColor: "lightgray",
-        // borderColor: clicked ? "crimson" : "lightgray",
       }}
     >
-      <TouchableOpacity
-      // onClick={() => {
-      //   setClicked(() => !clicked);
-      // }}
-      >
+      <TouchableOpacity style={{ flexDirection: "row" }}>
+        {props.directionLeft ? (
+          props.isPopular ? (
+            <Ionicons name="swap-vertical" size={12} style={{ padding: 3 }} />
+          ) : (
+            <FontAwesome5
+              name={props.iconName}
+              size={10}
+              style={{ padding: 3 }}
+            />
+          )
+        ) : null}
         <Text style={{ fontSize: 12 }}>{props.category}</Text>
+        {props.directionLeft ? null : (
+          <FontAwesome5
+            name={props.iconName}
+            size={10}
+            style={{ padding: 3 }}
+          />
+        )}
       </TouchableOpacity>
     </View>
   );

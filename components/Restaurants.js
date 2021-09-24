@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import Entypo from "react-native-vector-icons/Entypo";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Restaurants() {
   return (
@@ -9,16 +10,16 @@ export default function Restaurants() {
         1 Trillion restaurants around you
       </Text>
       {/* reusable component */}
-      <RestaurantInfo />
-      <RestaurantInfo />
-      <RestaurantInfo />
-      <RestaurantInfo />
+      <RestaurantInfo promoted offer pro />
+      <RestaurantInfo offer pro />
+      <RestaurantInfo offer />
+      <RestaurantInfo promoted pro />
       <RestaurantInfo />
     </View>
   );
 }
 
-const RestaurantInfo = () => (
+const RestaurantInfo = (props) => (
   // TODO change border radius to box shadow
   <View style={{ margin: 10, borderWidth: 1, borderRadius: 18 }}>
     <View>
@@ -34,33 +35,35 @@ const RestaurantInfo = () => (
         }}
       />
       {/* EXTRA COMPONENTS on IMAGE */}
-      <Text
-        style={{
-          position: "absolute",
-          top: 10,
-          left: 10,
-          paddingHorizontal: 4,
-          fontSize: 12,
-          fontWeight: "bold",
-          color: "white",
-          backgroundColor: "#7b797b",
-          opacity: 0.6,
-          borderRadius: 4,
-        }}
-      >
-        Promoted
-      </Text>
-      <Entypo
+      {props.promoted ? (
+        <Text
+          style={{
+            position: "absolute",
+            top: 10,
+            left: 10,
+            paddingHorizontal: 4,
+            fontSize: 12,
+            fontWeight: "bold",
+            color: "white",
+            backgroundColor: "#191919",
+            opacity: 0.6,
+            borderRadius: 4,
+          }}
+        >
+          Promoted
+        </Text>
+      ) : null}
+      <Ionicons
         style={{
           position: "absolute",
           top: 10,
           right: 10,
-          color: "gray",
+          color: "black",
           backgroundColor: "white",
-          padding: 8,
+          padding: 10,
           borderRadius: 100,
         }}
-        name="bookmark"
+        name="bookmark-outline"
         size={20}
       />
       <Text
@@ -79,21 +82,41 @@ const RestaurantInfo = () => (
       >
         24 mins
       </Text>
-      <Text
-        style={{
-          position: "absolute",
-          bottom: 10,
-          color: "white",
-          backgroundColor: "crimson",
-          fontWeight: "bold",
-          paddingVertical: 2,
-          paddingHorizontal: 6,
-          borderTopRightRadius: 4,
-          borderBottomRightRadius: 4,
-        }}
-      >
-        PRO extra 25% OFF
-      </Text>
+      {props.offer ? (
+        <Text
+          style={{
+            position: "absolute",
+            bottom: 40,
+            color: "white",
+            backgroundColor: "#006DFF",
+            fontWeight: "bold",
+            paddingVertical: 2,
+            paddingHorizontal: 6,
+            borderTopRightRadius: 4,
+            borderBottomRightRadius: 4,
+          }}
+        >
+          10% OFF{"\n"}Up to Rs. 40
+        </Text>
+      ) : null}
+
+      {props.pro ? (
+        <Text
+          style={{
+            position: "absolute",
+            bottom: 10,
+            color: "white",
+            backgroundColor: "crimson",
+            fontWeight: "bold",
+            paddingVertical: 2,
+            paddingHorizontal: 6,
+            borderTopRightRadius: 4,
+            borderBottomRightRadius: 4,
+          }}
+        >
+          PRO extra 25% OFF
+        </Text>
+      ) : null}
 
       {/* EXTRA COMPONENTS END HERE */}
     </View>
@@ -127,9 +150,10 @@ const RestaurantInfo = () => (
               paddingVertical: 2,
               paddingHorizontal: 6,
               borderRadius: 6,
+              alignSelf: "flex-end",
             }}
           >
-            4.2 Star
+            4.2 <FontAwesome name="star" style={{}} />
           </Text>
           <Text>Money for People</Text>
         </View>

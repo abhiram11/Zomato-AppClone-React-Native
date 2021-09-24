@@ -7,7 +7,7 @@ import SearchHeader from "../components/SearchHeader";
 
 export default function Home() {
   return (
-    <ScrollView vertical>
+    <ScrollView vertical showsVerticalScrollIndicator={false}>
       <View style={{ margin: 6 }}>
         <ProfileLocation />
         <SearchHeader />
