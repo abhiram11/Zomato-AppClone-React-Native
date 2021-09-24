@@ -136,8 +136,17 @@ const RestaurantInfo = (props) => (
         }}
       >
         <View>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>McDesi's</Text>
-          <Text style={{ fontSize: 14, fontWeight: "bold", color: "#7b797b" }}>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            McDesi's Special Hotel
+          </Text>
+          <Text
+            style={{
+              marginTop: 4,
+              fontSize: 14,
+              fontWeight: "bold",
+              color: "#7b797b",
+            }}
+          >
             Indian Chinese
           </Text>
         </View>
@@ -155,12 +164,72 @@ const RestaurantInfo = (props) => (
           >
             4.2 <FontAwesome name="star" style={{}} />
           </Text>
-          <Text>Money for People</Text>
+          <Text
+            style={{
+              marginTop: 4,
+              fontSize: 14,
+              fontWeight: "bold",
+              color: "#7b797b",
+            }}
+          >
+            Rs.200 for one
+          </Text>
         </View>
       </View>
     </View>
     <View style={{ padding: 10 }}>
-      <Text> Extra info </Text>
+      <ExtraInfoOne />
+      {/* <ExtraInfoTwo /> */}
     </View>
+  </View>
+);
+
+const ExtraInfoOne = () => (
+  <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <Ionicons
+      name="trending-up"
+      size={14}
+      style={{
+        color: "white",
+        backgroundColor: "#7B679A",
+        padding: 4,
+        borderRadius: 100,
+      }}
+    />
+    <Text style={{ marginHorizontal: 6, color: "gray" }}>
+      390+ orders placed from here recently
+    </Text>
+    <Image
+      source={{
+        uri: "https://b.zmtcdn.com/data/o2_assets/e50eb01feab6bd50e50430f34b4645ac1613542991.png",
+      }}
+      style={{ width: 62, height: "100%", marginLeft: "auto" }}
+    />
+  </View>
+);
+
+const ExtraInfoTwo = () => (
+  <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <Image
+      source={{
+        uri: "https://b.zmtcdn.com/data/o2_assets/e50eb01feab6bd50e50430f34b4645ac1613542991.png",
+      }}
+      style={{ width: 62, height: "100%" }}
+    />
+
+    <Text style={{ marginHorizontal: 6, color: "gray" }}>
+      390+ orders placed from here recently
+    </Text>
+    <Ionicons
+      name="trending-up"
+      size={14}
+      style={{
+        color: "white",
+        backgroundColor: "#7B679A",
+        padding: 4,
+        borderRadius: 100,
+        marginLeft: "auto",
+      }}
+    />
   </View>
 );

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 const foodCategoryData = [
   {
@@ -74,7 +75,7 @@ export default function FoodCategories() {
           <Text
             style={{ paddingVertical: 6, fontSize: 12, alignSelf: "center" }}
           >
-            see more ^
+            see more <FontAwesome5 name="chevron-down" size={10} />
           </Text>
         </View>
       </TouchableOpacity>
