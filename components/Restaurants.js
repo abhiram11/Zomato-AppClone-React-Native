@@ -10,10 +10,10 @@ export default function Restaurants() {
         1 Trillion restaurants around you
       </Text>
       {/* reusable component */}
-      <RestaurantInfo promoted offer pro />
-      <RestaurantInfo offer pro />
-      <RestaurantInfo offer />
-      <RestaurantInfo promoted pro />
+      <RestaurantInfo promoted offer pro time={14} />
+      <RestaurantInfo offer pro time={16} />
+      <RestaurantInfo offer time={32} />
+      <RestaurantInfo promoted pro time={24} />
       <RestaurantInfo />
     </View>
   );
@@ -21,7 +21,14 @@ export default function Restaurants() {
 
 const RestaurantInfo = (props) => (
   // TODO change border radius to box shadow
-  <View style={{ margin: 10, borderWidth: 1, borderRadius: 18 }}>
+  <View
+    style={{
+      margin: 10,
+      borderWidth: 2,
+      borderRadius: 18,
+      borderColor: "whitesmoke",
+    }}
+  >
     <View>
       <Image
         source={{
@@ -80,7 +87,7 @@ const RestaurantInfo = (props) => (
           color: "#7b797b",
         }}
       >
-        24 mins
+        {props.time} mins
       </Text>
       {props.offer ? (
         <Text
