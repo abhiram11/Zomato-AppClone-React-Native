@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import { SearchBar } from "../Home/SearchHeader";
+import FooterMenu from "./FooterMenu";
 
 export default function Dishes() {
   const localDishesData = [
@@ -28,37 +29,38 @@ export default function Dishes() {
         "https://eatmoreart.org/wp-content/uploads/2020/05/Rajma-Chawal-Indian-Curried-Kidney-Beans-Rice-IMG_1801-scaled.jpg",
       totalRatings: 280,
     },
-    {
-      dish: "Senzu Bean",
-      price: 99999,
-      rating: 5,
-      imageUrl:
-        "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
-      totalRatings: 100000,
-    },
-    {
-      dish: "Senzu Bean",
-      price: 99999,
-      rating: 5,
-      imageUrl:
-        "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
-      totalRatings: 100000,
-    },
-    {
-      dish: "Senzu Bean",
-      price: 99999,
-      rating: 5,
-      imageUrl:
-        "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
-      totalRatings: 100000,
-    },
+    // {
+    //   dish: "Senzu Bean",
+    //   price: 99999,
+    //   rating: 5,
+    //   imageUrl:
+    //     "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
+    //   totalRatings: 100000,
+    // },
+    // {
+    //   dish: "Senzu Bean",
+    //   price: 99999,
+    //   rating: 5,
+    //   imageUrl:
+    //     "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
+    //   totalRatings: 100000,
+    // },
+    // {
+    //   dish: "Senzu Bean",
+    //   price: 99999,
+    //   rating: 5,
+    //   imageUrl:
+    //     "https://i.pinimg.com/originals/ed/a9/b8/eda9b816a6d11d00905957565803e656.png",
+    //   totalRatings: 100000,
+    // },
   ];
   return (
     <>
       <SearchBar placeholder="Search within the menu..." />
-      <ScrollView vertical>
+      <ScrollView vertical showsVerticalScrollIndicator={false}>
         {localDishesData.map((dish, index) => (
           <Dish
+            key={index}
             dishName={dish.dish}
             dishPrice={dish.price}
             dishRating={dish.rating}
@@ -66,6 +68,7 @@ export default function Dishes() {
             dishImage={dish.imageUrl}
           />
         ))}
+        <FooterMenu />
       </ScrollView>
     </>
   );
@@ -83,9 +86,11 @@ const Dish = (props) => (
     }}
   >
     <View>
-      <Text style={{ fontSize: 18, fontWeight: "bold" }}>{props.dishName}</Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", paddingTop: 8 }}>
+        {props.dishName}
+      </Text>
       <Text style={{ fontWeight: "bold" }}>Rs.{props.dishPrice}</Text>
-      <View style={{ flexDirection: "row", marginTop: 48 }}>
+      <View style={{ flexDirection: "row", marginTop: 42 }}>
         <Text
           style={{
             color: "gray",

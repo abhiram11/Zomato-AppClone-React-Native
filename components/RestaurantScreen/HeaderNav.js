@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Feather from "react-native-vector-icons/Feather";
@@ -18,9 +18,15 @@ export default function HeaderNav() {
     >
       <Feather name="chevron-left" size={32} style={{ marginLeft: -8 }} />
       <View style={{ flexDirection: "row" }}>
-        <Feather name="camera" size={24} style={{ marginLeft: 30 }} />
-        <FontAwesome name="bookmark-o" size={24} style={{ marginLeft: 30 }} />
-        <FontAwesome5 name="share" size={24} style={{ marginLeft: 30 }} />
+        <TouchableOpacity>
+          <Feather name="camera" size={24} style={{ marginLeft: 30 }} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <FontAwesome name="bookmark-o" size={24} style={{ marginLeft: 30 }} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <FontAwesome5 name="share" size={24} style={{ marginLeft: 30 }} />
+        </TouchableOpacity>
       </View>
     </View>
   );
