@@ -54,7 +54,7 @@ export default function Dishes() {
     },
   ];
   return (
-    <View>
+    <>
       <SearchBar placeholder="Search within the menu..." />
       <ScrollView vertical>
         {localDishesData.map((dish, index) => (
@@ -67,7 +67,7 @@ export default function Dishes() {
           />
         ))}
       </ScrollView>
-    </View>
+    </>
   );
 }
 
